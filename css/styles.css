@@ -1,0 +1,59 @@
+/* Importando fuentes góticas y caligráficas */
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cinzel+Decorative&family=Mea+Culpa&display=swap');
+
+/* Definición de clases para las fuentes */
+.font-gothic {
+    font-family: 'UnifrakturMaguntia', cursive;
+}
+
+.font-script {
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+.font-manuscript {
+    font-family: 'Mea Culpa', cursive;
+}
+
+body {
+    background-color: #050505; /*negrillo*/
+    color:#ffffff; /*blanquillo*/
+}
+
+.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* Subimos la opacidad a 0.14 y bajamos la frecuencia a 0.5 para que los granos sean más grandes y dispersos */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 500 500' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.14'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/*Contraste para títulos y textos principales*/
+h1, h2, h3, .navbar-brand{
+    color:#ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.15); /*Brillo pa resaltar sobre el ruido*/
+}
+
+/*Contraste para párrafos*/
+p{
+    color: #ffffff !important;
+    text-shadow: 0 0 0 10px rgba(25,255,255,0.15);
+    font-family: 'Cinzel Decorative';
+}
+
+/* Estilos independientes para el Header */
+header.custom-header {
+    background-color: transparent !important;
+    border-bottom: 6px solid #222222;
+}
+
+/* Estilos independientes para el Footer */
+footer.custom-footer {
+    background-color: transparent !important;
+    border-top: 6px solid #222222;
+    border-bottom: none;
+}
+
