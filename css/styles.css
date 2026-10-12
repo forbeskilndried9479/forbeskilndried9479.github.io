@@ -44,6 +44,10 @@ p{
     font-family: 'Cinzel Decorative';
 }
 
+span{
+    font-family: 'Cinzel Decorative';
+}
+
 /* Estilos independientes para el Header */
 header.custom-header {
     background-color: transparent !important;
